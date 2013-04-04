@@ -1,0 +1,8 @@
+Test task from MobiDev.
+
+Implement very basic GitHub projects browser with following features :
+1) Search projects
+2) Review project details with Contributors List
+3) Review GitHub users (project contributors) details
+4) Ability to "Like" projects and users
+5) Start page (index) should open Yii Framework GitHub project
