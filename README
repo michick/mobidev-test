@@ -1,4 +1,11 @@
-Test task from MobiDev.
+Installation instructions:
+1. Create database with table "likes". See "/likes.sql" file for details.
+2. Set database parameters in file "/lib/DBConn.php", db_name, user, pass, host.
+3. Set GitHub login and passworn in file "/lib/CurlLite.php", line 20.
+
+==========================================================================
+
+Test task:
 
 Implement very basic GitHub projects browser with following features :
 1) Search projects
