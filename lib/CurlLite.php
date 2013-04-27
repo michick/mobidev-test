@@ -8,11 +8,12 @@ class CurlLite{
     
 
     public function __construct($custom_url = self::GITHUB_DEFAULT_URL){
+    		/*
 		$this->options = array(
 			CURLOPT_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
 			CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
 		);
-		
+		*/
 		$curl = curl_init($custom_url);
 		$this->current_url = $custom_url;
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -20,6 +21,7 @@ class CurlLite{
 		curl_setopt($curl, CURLOPT_USERPWD, 'login:password');
 		curl_setopt($curl, CURLOPT_COOKIEJAR, "my_cookies.txt");
 		curl_setopt($curl, CURLOPT_COOKIEFILE, "my_cookies.txt");
+		curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 		
 		$this->channel = $curl;
         
